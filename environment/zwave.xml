@@ -2,183 +2,35 @@
 <dhc:dogHomeConfiguration xmlns:dhc="http://elite.polito.it/dogHomeConfiguration">
     <dhc:buildingEnvironment>
         <dhc:building id="demoBuilding">
-            <dhc:flat id="demo" class="Flat">
-                <dhc:room id="demoRoom" class="StorageRoom">
-                    <dhc:description>Demo room</dhc:description>
+            <dhc:flat id="loft" class="Flat">
+                <dhc:room id="Storage_room" class="StorageRoom">
+                    <dhc:description>Loft room</dhc:description>
                 </dhc:room>
             </dhc:flat>
-            <dhc:flat id="loft" class="Flat">
-                <dhc:description>The loft in the city center</dhc:description>
-                <dhc:room id="bedroom2" class="Bedroom">
-                    <dhc:description>My new bedroom2</dhc:description>
+            <dhc:flat id="My_flat" class="Flat">
+                <dhc:description>My flat in the city center</dhc:description>
+                <dhc:room id="Parents_room" class="Bedroom">
+                    <dhc:description>The bedroom of my parents</dhc:description>
                 </dhc:room>
-                <dhc:room id="bedroom" class="Bedroom">
+                <dhc:room id="My_bedroom" class="Bedroom">
                     <dhc:description>My bedroom</dhc:description>
                 </dhc:room>
-                <dhc:room id="demo_room" class="Kitchen">
-                    <dhc:description>The room I love</dhc:description>
+                <dhc:room id="Living_room" class="LivingRoom">
+                    <dhc:description>Living Room</dhc:description>
                 </dhc:room>
-                <dhc:room id="kitchen" class="Kitchen">
+                <dhc:room id="Kitchen" class="Kitchen">
                     <dhc:description>The kitchen with a wonderful view</dhc:description>
                 </dhc:room>
-                <dhc:room id="bedroom1" class="Bedroom">
-                    <dhc:description>My bedroom 1</dhc:description>
+                <dhc:room id="Storage_room" class="StorageRoom">
+                    <dhc:description>Storage room</dhc:description>
                 </dhc:room>
             </dhc:flat>
         </dhc:building>
     </dhc:buildingEnvironment>
     <dhc:controllables>
-        <dhc:device class="TemperatureAndHumiditySensor" id="TemperatureAndHumiditySensor_2" domoticSystem="ZWave" gateway="zwave-gateway">
-            <dhc:description>New Device of type TemperatureAndHumiditySensor</dhc:description>
-            <dhc:isIn>demo_room</dhc:isIn>
-            <dhc:param name="NodeID" value="2" type="network"/>
-            <dhc:param name="InstanceID" value="0" type="network"/>
-            <dhc:controlFunctionality class="TemperatureMeasurementFunctionality">
-                <dhc:commands>
-                    <dhc:command class="GetTemperatureCommand" name="GetTemperatureCommand_TemperatureAndHumiditySensor_2" id="GetTemperatureCommand_TemperatureAndHumiditySensor_2">
-                        <dhc:param name="realCommandName" value="getTemperature"/>
-                        <dhc:param name="returnType" value="Measure"/>
-                    </dhc:command>
-                </dhc:commands>
-            </dhc:controlFunctionality>
-            <dhc:controlFunctionality class="HumidityMeasurementFunctionality">
-                <dhc:commands>
-                    <dhc:command class="GetRelativeHumidityCommand" name="GetRelativeHumidityCommand_TemperatureAndHumiditySensor_2" id="GetRelativeHumidityCommand_TemperatureAndHumiditySensor_2">
-                        <dhc:param name="realCommandName" value="getRelativeHumidity"/>
-                        <dhc:param name="returnType" value="Measure"/>
-                    </dhc:command>
-                </dhc:commands>
-            </dhc:controlFunctionality>
-            <dhc:notificationFunctionality class="StateChangeNotificationFunctionality">
-                <dhc:notifications>
-                    <dhc:notification class="StateChangeNotification" id="StateChangeNotification_TemperatureAndHumiditySensor_2">
-                        <dhc:param name="notificationName" value="stateChanged"/>
-                        <dhc:param name="notificationParamName" value="newState" type="State"/>
-                    </dhc:notification>
-                </dhc:notifications>
-            </dhc:notificationFunctionality>
-            <dhc:notificationFunctionality class="TemperatureMeasurementNotificationFunctionality">
-                <dhc:notifications>
-                    <dhc:notification class="TemperatureMeasurementNotification" id="TemperatureMeasurementNotification_TemperatureAndHumiditySensor_2">
-                        <dhc:param name="nParams" value="2"/>
-                        <dhc:param name="notificationName" value="newTemperatureValue"/>
-                        <dhc:param name="unitOfMeasure" value="C"/>
-                        <dhc:param name="notificationParamName" value="temperatureValue" type="Measure"/>
-                    </dhc:notification>
-                </dhc:notifications>
-            </dhc:notificationFunctionality>
-            <dhc:notificationFunctionality class="HumidityMeasurementNotificationFunctionality">
-                <dhc:notifications>
-                    <dhc:notification class="HumidityMeasurementNotification" id="HumidityMeasurementNotification_TemperatureAndHumiditySensor_2">
-                        <dhc:param name="nParams" value="2"/>
-                        <dhc:param name="notificationName" value="changedRelativeHumidity"/>
-                        <dhc:param name="unitOfMeasure" value="%"/>
-                        <dhc:param name="notificationParamName" value="relativeHumidity" type="Measure"/>
-                    </dhc:notification>
-                </dhc:notifications>
-            </dhc:notificationFunctionality>
-            <dhc:state class="TemperatureState">
-                <dhc:statevalues>
-                    <dhc:statevalue class="TemperatureStateValue" name=""/>
-                </dhc:statevalues>
-            </dhc:state>
-            <dhc:state class="HumidityMeasurementState">
-                <dhc:statevalues>
-                    <dhc:statevalue class="HumidityStateValue" name=""/>
-                </dhc:statevalues>
-            </dhc:state>
-        </dhc:device>
-        <dhc:device class="MeteringPowerOutlet" id="MeteringPowerOutlet_7" domoticSystem="ZWave" gateway="zwave-gateway">
-            <dhc:description>Presa di corrente domotica controllabile via wifi</dhc:description>
-            <dhc:isIn>demo_room</dhc:isIn>
-            <dhc:param name="NodeID" value="7" type="network"/>
-            <dhc:param name="InstanceID" value="0" type="network"/>
-            <dhc:controlFunctionality class="OnOffFunctionality">
-                <dhc:commands>
-                    <dhc:command class="OffCommand" name="OffCommand_MeteringPowerOutlet_7" id="OffCommand_MeteringPowerOutlet_7">
-                        <dhc:param name="realCommandName" value="off"/>
-                    </dhc:command>
-                    <dhc:command class="OnCommand" name="OnCommand_MeteringPowerOutlet_7" id="OnCommand_MeteringPowerOutlet_7">
-                        <dhc:param name="realCommandName" value="on"/>
-                    </dhc:command>
-                </dhc:commands>
-            </dhc:controlFunctionality>
-            <dhc:controlFunctionality class="ActivePowerMeasurementFunctionality">
-                <dhc:commands>
-                    <dhc:command class="GetActivePowerCommand" name="GetActivePowerCommand_MeteringPowerOutlet_7" id="GetActivePowerCommand_MeteringPowerOutlet_7">
-                        <dhc:param name="realCommandName" value="getActivePower"/>
-                        <dhc:param name="returnType" value="Measure"/>
-                    </dhc:command>
-                </dhc:commands>
-            </dhc:controlFunctionality>
-            <dhc:controlFunctionality class="ActiveEnergyMeasurementFunctionality">
-                <dhc:commands>
-                    <dhc:command class="GetActiveEnergyCommand" name="GetActiveEnergyValueCommand_MeteringPowerOutlet_7" id="GetActiveEnergyValueCommand_MeteringPowerOutlet_7"/>
-                </dhc:commands>
-            </dhc:controlFunctionality>
-            <dhc:notificationFunctionality class="StateChangeNotificationFunctionality">
-                <dhc:notifications>
-                    <dhc:notification class="StateChangeNotification" id="StateChangeNotification_MeteringPowerOutlet_7">
-                        <dhc:param name="notificationName" value="stateChanged"/>
-                        <dhc:param name="notificationParamName" value="newState" type="State"/>
-                    </dhc:notification>
-                </dhc:notifications>
-            </dhc:notificationFunctionality>
-            <dhc:notificationFunctionality class="ActivePowerMeasurementNotificationFunctionality">
-                <dhc:notifications>
-                    <dhc:notification class="ActivePowerMeasurementNotification" id="ActivePowerMeasurementNotification_MeteringPowerOutlet_7">
-                        <dhc:param name="nParams" value="2"/>
-                        <dhc:param name="notificationName" value="newActivePowerValue"/>
-                        <dhc:param name="unitOfMeasure" value="W"/>
-                        <dhc:param name="notificationParamName" value="value" type="Measure"/>
-                    </dhc:notification>
-                </dhc:notifications>
-            </dhc:notificationFunctionality>
-            <dhc:notificationFunctionality class="ActiveEnergyMeasurementNotificationFunctionality">
-                <dhc:notifications>
-                    <dhc:notification class="ActiveEnergyMeasurementNotification" id="ActiveEnergyMeasurementNotification_MeteringPowerOutlet_7">
-                        <dhc:param name="nParams" value="2"/>
-                        <dhc:param name="notificationName" value="newActiveEnergyValue"/>
-                        <dhc:param name="unitOfMeasure" value="Wh"/>
-                        <dhc:param name="notificationParamName" value="value" type="Measure"/>
-                    </dhc:notification>
-                </dhc:notifications>
-            </dhc:notificationFunctionality>
-            <dhc:state class="OnOffState">
-                <dhc:statevalues>
-                    <dhc:statevalue class="OffStateValue" name="off"/>
-                    <dhc:statevalue class="OnStateValue" name="on"/>
-                </dhc:statevalues>
-            </dhc:state>
-            <dhc:state class="SinglePhaseEnergyMeasurementState">
-                <dhc:statevalues>
-                    <dhc:statevalue class="SinglePhaseActiveEnergyStateValue" name=""/>
-                </dhc:statevalues>
-            </dhc:state>
-            <dhc:state class="SinglePhaseActivePowerMeasurementState">
-                <dhc:statevalues>
-                    <dhc:statevalue class="SinglePhaseActivePowerStateValue" name=""/>
-                </dhc:statevalues>
-            </dhc:state>
-        </dhc:device>
-        <dhc:device class="ZWaveGateway" id="zwave-gateway" domoticSystem="ZWave">
-            <dhc:description>The ZWave X gateway</dhc:description>
-            <dhc:isIn>demo_room</dhc:isIn>
-            <dhc:param name="NodeID" value="1" type="network"/>
-            <dhc:controlFunctionality class="AssociateFunctionality">
-                <dhc:commands>
-                    <dhc:command class="AssociateCommand" name="AssociateCommand_zwave-gateway" id="AssociateCommand_zwave-gateway">
-                        <dhc:param name="realCommandName" value="associate"/>
-                    </dhc:command>
-                    <dhc:command class="DisassociateCommand" name="DisassociateCommand_zwave-gateway" id="DisassociateCommand_zwave-gateway">
-                        <dhc:param name="realCommandName" value="disassociate"/>
-                    </dhc:command>
-                </dhc:commands>
-            </dhc:controlFunctionality>
-        </dhc:device>
         <dhc:device class="MeteringPowerOutlet" id="MeteringPowerOutlet_4" domoticSystem="ZWave" gateway="zwave-gateway">
-            <dhc:description>Presa di corrente domotica controllabile via wifi</dhc:description>
-            <dhc:isIn>demo_room</dhc:isIn>
+            <dhc:description>Wi-Fi controlled power outlet near the desk</dhc:description>
+            <dhc:isIn>My_bedroom</dhc:isIn>
             <dhc:param name="NodeID" value="4" type="network"/>
             <dhc:param name="InstanceID" value="0" type="network"/>
             <dhc:controlFunctionality class="OnOffFunctionality">
@@ -250,8 +102,8 @@
             </dhc:state>
         </dhc:device>
         <dhc:device class="MeteringPowerOutlet" id="MeteringPowerOutlet_3" domoticSystem="ZWave" gateway="zwave-gateway">
-            <dhc:description>Presa di corrente domotica controllabile via wifi</dhc:description>
-            <dhc:isIn>demo_room</dhc:isIn>
+            <dhc:description>Wi-Fi controlled power outlet near the door</dhc:description>
+            <dhc:isIn>Living_room</dhc:isIn>
             <dhc:param name="NodeID" value="3" type="network"/>
             <dhc:param name="InstanceID" value="0" type="network"/>
             <dhc:controlFunctionality class="OnOffFunctionality">
@@ -322,9 +174,82 @@
                 </dhc:statevalues>
             </dhc:state>
         </dhc:device>
+        <dhc:device class="MeteringPowerOutlet" id="MeteringPowerOutlet_7" domoticSystem="ZWave" gateway="zwave-gateway">
+            <dhc:description>Wi-Fi controlled power outlet near the sofa</dhc:description>
+            <dhc:isIn>Living_room</dhc:isIn>
+            <dhc:param name="NodeID" value="7" type="network"/>
+            <dhc:param name="InstanceID" value="0" type="network"/>
+            <dhc:controlFunctionality class="OnOffFunctionality">
+                <dhc:commands>
+                    <dhc:command class="OffCommand" name="OffCommand_MeteringPowerOutlet_7" id="OffCommand_MeteringPowerOutlet_7">
+                        <dhc:param name="realCommandName" value="off"/>
+                    </dhc:command>
+                    <dhc:command class="OnCommand" name="OnCommand_MeteringPowerOutlet_7" id="OnCommand_MeteringPowerOutlet_7">
+                        <dhc:param name="realCommandName" value="on"/>
+                    </dhc:command>
+                </dhc:commands>
+            </dhc:controlFunctionality>
+            <dhc:controlFunctionality class="ActivePowerMeasurementFunctionality">
+                <dhc:commands>
+                    <dhc:command class="GetActivePowerCommand" name="GetActivePowerCommand_MeteringPowerOutlet_7" id="GetActivePowerCommand_MeteringPowerOutlet_7">
+                        <dhc:param name="realCommandName" value="getActivePower"/>
+                        <dhc:param name="returnType" value="Measure"/>
+                    </dhc:command>
+                </dhc:commands>
+            </dhc:controlFunctionality>
+            <dhc:controlFunctionality class="ActiveEnergyMeasurementFunctionality">
+                <dhc:commands>
+                    <dhc:command class="GetActiveEnergyCommand" name="GetActiveEnergyValueCommand_MeteringPowerOutlet_7" id="GetActiveEnergyValueCommand_MeteringPowerOutlet_7"/>
+                </dhc:commands>
+            </dhc:controlFunctionality>
+            <dhc:notificationFunctionality class="StateChangeNotificationFunctionality">
+                <dhc:notifications>
+                    <dhc:notification class="StateChangeNotification" id="StateChangeNotification_MeteringPowerOutlet_7">
+                        <dhc:param name="notificationName" value="stateChanged"/>
+                        <dhc:param name="notificationParamName" value="newState" type="State"/>
+                    </dhc:notification>
+                </dhc:notifications>
+            </dhc:notificationFunctionality>
+            <dhc:notificationFunctionality class="ActivePowerMeasurementNotificationFunctionality">
+                <dhc:notifications>
+                    <dhc:notification class="ActivePowerMeasurementNotification" id="ActivePowerMeasurementNotification_MeteringPowerOutlet_7">
+                        <dhc:param name="nParams" value="2"/>
+                        <dhc:param name="notificationName" value="newActivePowerValue"/>
+                        <dhc:param name="unitOfMeasure" value="W"/>
+                        <dhc:param name="notificationParamName" value="value" type="Measure"/>
+                    </dhc:notification>
+                </dhc:notifications>
+            </dhc:notificationFunctionality>
+            <dhc:notificationFunctionality class="ActiveEnergyMeasurementNotificationFunctionality">
+                <dhc:notifications>
+                    <dhc:notification class="ActiveEnergyMeasurementNotification" id="ActiveEnergyMeasurementNotification_MeteringPowerOutlet_7">
+                        <dhc:param name="nParams" value="2"/>
+                        <dhc:param name="notificationName" value="newActiveEnergyValue"/>
+                        <dhc:param name="unitOfMeasure" value="Wh"/>
+                        <dhc:param name="notificationParamName" value="value" type="Measure"/>
+                    </dhc:notification>
+                </dhc:notifications>
+            </dhc:notificationFunctionality>
+            <dhc:state class="OnOffState">
+                <dhc:statevalues>
+                    <dhc:statevalue class="OffStateValue" name="off"/>
+                    <dhc:statevalue class="OnStateValue" name="on"/>
+                </dhc:statevalues>
+            </dhc:state>
+            <dhc:state class="SinglePhaseEnergyMeasurementState">
+                <dhc:statevalues>
+                    <dhc:statevalue class="SinglePhaseActiveEnergyStateValue" name=""/>
+                </dhc:statevalues>
+            </dhc:state>
+            <dhc:state class="SinglePhaseActivePowerMeasurementState">
+                <dhc:statevalues>
+                    <dhc:statevalue class="SinglePhaseActivePowerStateValue" name=""/>
+                </dhc:statevalues>
+            </dhc:state>
+        </dhc:device>
         <dhc:device class="MeteringPowerOutlet" id="MeteringPowerOutlet_5" domoticSystem="ZWave" gateway="zwave-gateway">
-            <dhc:description>Presa di corrente domotica controllabile via wifi</dhc:description>
-            <dhc:isIn>demo_room</dhc:isIn>
+            <dhc:description>Wi-Fi controlled power outlet near the window</dhc:description>
+            <dhc:isIn>Living_room</dhc:isIn>
             <dhc:param name="NodeID" value="5" type="network"/>
             <dhc:param name="InstanceID" value="0" type="network"/>
             <dhc:controlFunctionality class="OnOffFunctionality">
@@ -394,6 +319,81 @@
                     <dhc:statevalue class="SinglePhaseActivePowerStateValue" name=""/>
                 </dhc:statevalues>
             </dhc:state>
+        </dhc:device>
+        <dhc:device class="TemperatureAndHumiditySensor" id="TemperatureAndHumiditySensor_2" domoticSystem="ZWave" gateway="zwave-gateway">
+            <dhc:description>Temperature And Humidity Sensor</dhc:description>
+            <dhc:isIn>Living_room</dhc:isIn>
+            <dhc:param name="NodeID" value="2" type="network"/>
+            <dhc:param name="InstanceID" value="0" type="network"/>
+            <dhc:controlFunctionality class="TemperatureMeasurementFunctionality">
+                <dhc:commands>
+                    <dhc:command class="GetTemperatureCommand" name="GetTemperatureCommand_TemperatureAndHumiditySensor_2" id="GetTemperatureCommand_TemperatureAndHumiditySensor_2">
+                        <dhc:param name="realCommandName" value="getTemperature"/>
+                        <dhc:param name="returnType" value="Measure"/>
+                    </dhc:command>
+                </dhc:commands>
+            </dhc:controlFunctionality>
+            <dhc:controlFunctionality class="HumidityMeasurementFunctionality">
+                <dhc:commands>
+                    <dhc:command class="GetRelativeHumidityCommand" name="GetRelativeHumidityCommand_TemperatureAndHumiditySensor_2" id="GetRelativeHumidityCommand_TemperatureAndHumiditySensor_2">
+                        <dhc:param name="realCommandName" value="getRelativeHumidity"/>
+                        <dhc:param name="returnType" value="Measure"/>
+                    </dhc:command>
+                </dhc:commands>
+            </dhc:controlFunctionality>
+            <dhc:notificationFunctionality class="StateChangeNotificationFunctionality">
+                <dhc:notifications>
+                    <dhc:notification class="StateChangeNotification" id="StateChangeNotification_TemperatureAndHumiditySensor_2">
+                        <dhc:param name="notificationName" value="stateChanged"/>
+                        <dhc:param name="notificationParamName" value="newState" type="State"/>
+                    </dhc:notification>
+                </dhc:notifications>
+            </dhc:notificationFunctionality>
+            <dhc:notificationFunctionality class="TemperatureMeasurementNotificationFunctionality">
+                <dhc:notifications>
+                    <dhc:notification class="TemperatureMeasurementNotification" id="TemperatureMeasurementNotification_TemperatureAndHumiditySensor_2">
+                        <dhc:param name="nParams" value="2"/>
+                        <dhc:param name="notificationName" value="newTemperatureValue"/>
+                        <dhc:param name="unitOfMeasure" value="C"/>
+                        <dhc:param name="notificationParamName" value="temperatureValue" type="Measure"/>
+                    </dhc:notification>
+                </dhc:notifications>
+            </dhc:notificationFunctionality>
+            <dhc:notificationFunctionality class="HumidityMeasurementNotificationFunctionality">
+                <dhc:notifications>
+                    <dhc:notification class="HumidityMeasurementNotification" id="HumidityMeasurementNotification_TemperatureAndHumiditySensor_2">
+                        <dhc:param name="nParams" value="2"/>
+                        <dhc:param name="notificationName" value="changedRelativeHumidity"/>
+                        <dhc:param name="unitOfMeasure" value="%"/>
+                        <dhc:param name="notificationParamName" value="relativeHumidity" type="Measure"/>
+                    </dhc:notification>
+                </dhc:notifications>
+            </dhc:notificationFunctionality>
+            <dhc:state class="TemperatureState">
+                <dhc:statevalues>
+                    <dhc:statevalue class="TemperatureStateValue" name=""/>
+                </dhc:statevalues>
+            </dhc:state>
+            <dhc:state class="HumidityMeasurementState">
+                <dhc:statevalues>
+                    <dhc:statevalue class="HumidityStateValue" name=""/>
+                </dhc:statevalues>
+            </dhc:state>
+        </dhc:device>
+        <dhc:device class="ZWaveGateway" id="zwave-gateway" domoticSystem="ZWave">
+            <dhc:description>The ZWave X gateway</dhc:description>
+            <dhc:isIn>Storage_room</dhc:isIn>
+            <dhc:param name="NodeID" value="1" type="network"/>
+            <dhc:controlFunctionality class="AssociateFunctionality">
+                <dhc:commands>
+                    <dhc:command class="AssociateCommand" name="AssociateCommand_zwave-gateway" id="AssociateCommand_zwave-gateway">
+                        <dhc:param name="realCommandName" value="associate"/>
+                    </dhc:command>
+                    <dhc:command class="DisassociateCommand" name="DisassociateCommand_zwave-gateway" id="DisassociateCommand_zwave-gateway">
+                        <dhc:param name="realCommandName" value="disassociate"/>
+                    </dhc:command>
+                </dhc:commands>
+            </dhc:controlFunctionality>
         </dhc:device>
     </dhc:controllables>
 </dhc:dogHomeConfiguration>
