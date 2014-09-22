@@ -16,7 +16,7 @@
             <dhc:description>The ZWave X gateway
 			</dhc:description>
             <dhc:isIn>Office</dhc:isIn>
-            <dhc:param name="NodeID" value="1" type="network"/>
+            <dhc:param name="nodeId" value="1" type="network"/>
             <dhc:controlFunctionality class="AssociateFunctionality">
                 <dhc:commands>
                     <dhc:command class="AssociateCommand" name="AssociateCommand_zwave-gateway" id="AssociateCommand_zwave-gateway">
@@ -43,8 +43,8 @@
         <dhc:device class="DoorSensor" id="DoorSensor_89" domoticSystem="ZWave" gateway="zwave-gateway">
             <dhc:description>New Device of type DoorSensor</dhc:description>
             <dhc:isIn>Office</dhc:isIn>
-            <dhc:param name="NodeID" value="89" type="network"/>
-            <dhc:param name="InstanceID" value="0" type="network"/>
+            <dhc:param name="nodeId" value="89" type="network"/>
+            <dhc:param name="instanceId" value="0" type="network"/>
             <dhc:notificationFunctionality class="OpenCloseNotificationFunctionality">
                 <dhc:notifications>
                     <dhc:notification class="CloseNotification" id="CloseNotification_DoorSensor_89">
@@ -67,9 +67,9 @@
         <dhc:device class="SinglePhaseElectricityMeter" id="SinglePhaseElectricityMeter_7" domoticSystem="ZWave" gateway="zwave-gateway">
             <dhc:description>New Device of type SinglePhaseElectricityMeter</dhc:description>
             <dhc:isIn>Office</dhc:isIn>
-            <dhc:param name="NodeID" value="7" type="network"/>
-            <dhc:param name="InstanceID" value="0" type="network"/>
-            <dhc:param name="InstanceID" value="1" type="network"/>
+            <dhc:param name="nodeId" value="7" type="network"/>
+            <dhc:param name="instanceId" value="0" type="network"/>
+            <dhc:param name="instanceId" value="1" type="network"/>
             <dhc:controlFunctionality class="SinglePhaseActivePowerMeasurementFunctionality">
                 <dhc:commands>
                     <dhc:command class="Get1PhaseActivePowerCommand" name="Get1PhaseActivePowerCommand_SinglePhaseElectricityMeter_7" id="Get1PhaseActivePowerCommand_SinglePhaseElectricityMeter_7">
@@ -91,7 +91,7 @@
                     <dhc:notification class="SinglePhaseActivePowerMeasurementNotification" id="SinglePhaseActivePowerMeasurementNotification_SinglePhaseElectricityMeter_7">
                         <dhc:param name="nParams" value="2"/>
                         <dhc:param name="notificationName" value="newActivePowerValue"/>
-                        <dhc:param name="unitOfMeasure" value="W"/>
+                        <dhc:param name="measuredIn" value="W"/>
                         <dhc:param name="notificationParamName" value="value" type="Measure"/>
                     </dhc:notification>
                 </dhc:notifications>
@@ -101,7 +101,7 @@
                     <dhc:notification class="SinglePhaseActiveEnergyMeasurementNotification" id="SinglePhaseActiveEnergyMeasurementNotification_SinglePhaseElectricityMeter_7">
                         <dhc:param name="nParams" value="2"/>
                         <dhc:param name="notificationName" value="newActiveEnergyValue"/>
-                        <dhc:param name="unitOfMeasure" value="kWh"/>
+                        <dhc:param name="measuredIn" value="kWh"/>
                         <dhc:param name="notificationParamName" value="value" type="Measure"/>
                     </dhc:notification>
                 </dhc:notifications>
@@ -120,8 +120,8 @@
         <dhc:device class="EnergyAndPowerMeteringLevelControllableOutput" id="EnergyAndPowerMeteringLevelControllableOutput_74" domoticSystem="ZWave" gateway="zwave-gateway">
             <dhc:description>New Device of type EnergyAndPowerMeteringLevelControllableOutput</dhc:description>
             <dhc:isIn>Office</dhc:isIn>
-            <dhc:param name="NodeID" value="74" type="network"/>
-            <dhc:param name="InstanceID" value="0" type="network"/>
+            <dhc:param name="nodeId" value="74" type="network"/>
+            <dhc:param name="instanceId" value="0" type="network"/>
             <dhc:controlFunctionality class="OnOffFunctionality">
                 <dhc:commands>
                     <dhc:command class="OffCommand" name="OffCommand_EnergyAndPowerMeteringLevelControllableOutput_74" id="OffCommand_EnergyAndPowerMeteringLevelControllableOutput_74">
@@ -197,7 +197,7 @@
                     <dhc:notification class="SinglePhaseActivePowerMeasurementNotification">
                         <dhc:param name="nParams" value="2"/>
                         <dhc:param name="notificationName" value="newActivePowerValue"/>
-                        <dhc:param name="unitOfMeasure" value="W"/>
+                        <dhc:param name="measuredIn" value="W"/>
                         <dhc:param name="notificationParamName" value="value" type="Measure"/>
                     </dhc:notification>
                 </dhc:notifications>
@@ -207,7 +207,7 @@
                     <dhc:notification class="SinglePhaseActiveEnergyMeasurementNotification">
                         <dhc:param name="nParams" value="2"/>
                         <dhc:param name="notificationName" value="newActiveEnergyValue"/>
-                        <dhc:param name="unitOfMeasure" value="Wh"/>
+                        <dhc:param name="measuredIn" value="Wh"/>
                         <dhc:param name="notificationParamName" value="value" type="Measure"/>
                     </dhc:notification>
                 </dhc:notifications>
@@ -237,8 +237,8 @@
         <dhc:device class="MeteringPowerOutlet" id="MeteringPowerOutlet_75" domoticSystem="ZWave" gateway="zwave-gateway">
             <dhc:description>New Device of type MeteringPowerOutlet</dhc:description>
             <dhc:isIn>Office</dhc:isIn>
-            <dhc:param name="NodeID" value="75" type="network"/>
-            <dhc:param name="InstanceID" value="0" type="network"/>
+            <dhc:param name="nodeId" value="75" type="network"/>
+            <dhc:param name="instanceId" value="0" type="network"/>
             <dhc:controlFunctionality class="OnOffFunctionality">
                 <dhc:commands>
                     <dhc:command class="OffCommand" name="OffCommand_MeteringPowerOutlet_75" id="OffCommand_MeteringPowerOutlet_75">
@@ -282,7 +282,7 @@
                     <dhc:notification class="SinglePhaseActivePowerMeasurementNotification">
                         <dhc:param name="nParams" value="2"/>
                         <dhc:param name="notificationName" value="newActivePowerValue"/>
-                        <dhc:param name="unitOfMeasure" value="W"/>
+                        <dhc:param name="measuredIn" value="W"/>
                         <dhc:param name="notificationParamName" value="value" type="Measure"/>
                     </dhc:notification>
                 </dhc:notifications>
@@ -292,7 +292,7 @@
                     <dhc:notification class="SinglePhaseActiveEnergyMeasurementNotification">
                         <dhc:param name="nParams" value="2"/>
                         <dhc:param name="notificationName" value="newActiveEnergyValue"/>
-                        <dhc:param name="unitOfMeasure" value="Wh"/>
+                        <dhc:param name="measuredIn" value="Wh"/>
                         <dhc:param name="notificationParamName" value="value" type="Measure"/>
                     </dhc:notification>
                 </dhc:notifications>
@@ -317,8 +317,8 @@
         <dhc:device class="MovementSensor" id="MovementSensor_78" domoticSystem="ZWave" gateway="zwave-gateway">
             <dhc:description>New Device of type MovementSensor</dhc:description>
             <dhc:isIn>Office</dhc:isIn>
-            <dhc:param name="NodeID" value="78" type="network"/>
-            <dhc:param name="InstanceID" value="0" type="network"/>
+            <dhc:param name="nodeId" value="78" type="network"/>
+            <dhc:param name="instanceId" value="0" type="network"/>
             <dhc:notificationFunctionality class="MovementNotificationFunctionality">
                 <dhc:notifications>
                     <dhc:notification class="MovementCeasedNotification" id="MovementCeasedNotification_MovementSensor_78">
@@ -341,10 +341,10 @@
         <dhc:device class="TemperatureAndHumiditySensor" id="TemperatureAndHumiditySensor_76" domoticSystem="ZWave" gateway="zwave-gateway">
             <dhc:description>New Device of type TemperatureAndHumiditySensor</dhc:description>
             <dhc:isIn>Office</dhc:isIn>
-            <dhc:param name="NodeID" value="76" type="network"/>
-            <dhc:param name="InstanceID" value="0" type="network"/>
-            <dhc:param name="InstanceID" value="1" type="network"/>
-            <dhc:param name="InstanceID" value="2" type="network"/>
+            <dhc:param name="nodeId" value="76" type="network"/>
+            <dhc:param name="instanceId" value="0" type="network"/>
+            <dhc:param name="instanceId" value="1" type="network"/>
+            <dhc:param name="instanceId" value="2" type="network"/>
             <dhc:controlFunctionality class="TemperatureMeasurementFunctionality">
                 <dhc:commands>
                     <dhc:command class="GetTemperatureCommand" name="GetTemperatureCommand_TemperatureAndHumiditySensor_76" id="GetTemperatureCommand_TemperatureAndHumiditySensor_76">
@@ -366,7 +366,7 @@
                     <dhc:notification class="TemperatureMeasurementNotification" id="TemperatureMeasurementNotification_TemperatureAndHumiditySensor_76">
                         <dhc:param name="nParams" value="2"/>
                         <dhc:param name="notificationName" value="newTemperatureValue"/>
-                        <dhc:param name="unitOfMeasure" value="C"/>
+                        <dhc:param name="measuredIn" value="C"/>
                         <dhc:param name="notificationParamName" value="temperatureValue" type="Measure"/>
                     </dhc:notification>
                 </dhc:notifications>
@@ -376,7 +376,7 @@
                     <dhc:notification class="HumidityMeasurementNotification" id="HumidityMeasurementNotification_TemperatureAndHumiditySensor_76">
                         <dhc:param name="nParams" value="2"/>
                         <dhc:param name="notificationName" value="changedRelativeHumidity"/>
-                        <dhc:param name="unitOfMeasure" value="%"/>
+                        <dhc:param name="measuredIn" value="%"/>
                         <dhc:param name="notificationParamName" value="relativeHumidity" type="Measure"/>
                     </dhc:notification>
                 </dhc:notifications>
@@ -395,8 +395,8 @@
         <dhc:device class="LampHolder" id="LampHolder_4" domoticSystem="ZWave" gateway="zwave-gateway">
             <dhc:description>New Device of type LampHolder</dhc:description>
             <dhc:isIn>Office</dhc:isIn>
-            <dhc:param name="NodeID" value="4" type="network"/>
-            <dhc:param name="InstanceID" value="0" type="network"/>
+            <dhc:param name="nodeId" value="4" type="network"/>
+            <dhc:param name="instanceId" value="0" type="network"/>
             <dhc:controlFunctionality class="OnOffFunctionality">
                 <dhc:commands>
                     <dhc:command class="OffCommand" name="OffCommand_LampHolder_4" id="OffCommand_LampHolder_4">
@@ -429,8 +429,8 @@
         <dhc:device class="QuadSensor" id="QuadSensor_91" domoticSystem="ZWave" gateway="zwave-gateway">
             <dhc:description>New Device of type QuadSensor</dhc:description>
             <dhc:isIn>Office</dhc:isIn>
-            <dhc:param name="NodeID" value="91" type="network"/>
-            <dhc:param name="InstanceID" value="0" type="network"/>
+            <dhc:param name="nodeId" value="91" type="network"/>
+            <dhc:param name="instanceId" value="0" type="network"/>
             <dhc:controlFunctionality class="TemperatureMeasurementFunctionality">
                 <dhc:commands>
                     <dhc:command class="GetTemperatureCommand" name="GetTemperatureCommand_QuadSensor_91" id="GetTemperatureCommand_QuadSensor_91">
@@ -472,7 +472,7 @@
                     <dhc:notification class="TemperatureMeasurementNotification" id="TemperatureMeasurementNotification_QuadSensor_91">
                         <dhc:param name="nParams" value="2"/>
                         <dhc:param name="notificationName" value="newTemperatureValue"/>
-                        <dhc:param name="unitOfMeasure" value="C"/>
+                        <dhc:param name="measuredIn" value="C"/>
                         <dhc:param name="notificationParamName" value="temperatureValue" type="Measure"/>
                     </dhc:notification>
                 </dhc:notifications>
@@ -482,7 +482,7 @@
                     <dhc:notification class="HumidityMeasurementNotification" id="HumidityMeasurementNotification_QuadSensor_91">
                         <dhc:param name="nParams" value="2"/>
                         <dhc:param name="notificationName" value="changedRelativeHumidity"/>
-                        <dhc:param name="unitOfMeasure" value="%"/>
+                        <dhc:param name="measuredIn" value="%"/>
                         <dhc:param name="notificationParamName" value="relativeHumidity" type="Measure"/>
                     </dhc:notification>
                 </dhc:notifications>
@@ -492,7 +492,7 @@
                     <dhc:notification class="LuminosityMeasurementNotification" id="LuminosityMeasurementNotification_QuadSensor_91">
                         <dhc:param name="nParams" value="2"/>
                         <dhc:param name="notificationName" value="newLuminosityValue"/>
-                        <dhc:param name="unitOfMeasure" value="Lux"/>
+                        <dhc:param name="measuredIn" value="Lux"/>
                         <dhc:param name="notificationParamName" value="luminosityValue" type="Measure"/>
                     </dhc:notification>
                 </dhc:notifications>
